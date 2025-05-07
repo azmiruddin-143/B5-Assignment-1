@@ -34,4 +34,16 @@ function filterByRating(items: Book[]):Book[] {
 
 }
 
-console.log(filterByRating(books));
+const filterRating = filterByRating(books)
+console.log(filterRating);
+
+
+
+// Problem-3 
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+    return arrays.flat()
+}
+
+const allArayData = (concatenateArrays([1, 2], [3, 4], [5]))
+console.log(allArayData);
