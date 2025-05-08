@@ -6,7 +6,9 @@ function formatString(typeing: string, toUpper?: boolean):string {
     }
 }
 
- formatString("Hello", false)
+formatString("Hello"); 
+formatString("Hello", true);   
+formatString("Hello", false);
 
 
 
@@ -34,7 +36,8 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     return arrays.flat();
 }
 
-concatenateArrays([1, 2], [3, 4], [5])
+concatenateArrays(["a", "b"], ["c"]);
+concatenateArrays([1, 2], [3, 4], [5]);  
 
 
 class Vehicle {
