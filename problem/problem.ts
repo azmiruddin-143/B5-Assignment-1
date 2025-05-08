@@ -170,3 +170,20 @@ enum Day {
   console.log(getDayType(Day.Monday)) ;  
   console.log(getDayType(Day.Sunday)) ; 
   
+
+// Problem-8
+
+  async function squareAsync(n: number): Promise<number> {
+    return await new  Promise((resolve, reject) =>{
+         if(n < 0) {
+            return reject("Negative number not allowed")
+         }
+
+         setTimeout(() =>{
+            resolve(n*n);
+         },1000)
+    })
+  }
+squareAsync(4)
+.then(console.log)
+.catch(console.error);
