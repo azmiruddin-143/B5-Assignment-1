@@ -6,29 +6,44 @@
 - And if you have to work with many types (such as union, intersection) then it is better to use type
 
 # Example
-## interface User {
- ## name: string;
- ## age: number;
+## 🧩 Interface Example
+
+```ts
+interface User {
+  name: string;
+  age: number;
 }
 
-## const user1: User = {
- ## name: "Azmir",
- ## age: 20
-## };
+const user1: User = {
+  name: "Azmir",
+  age: 20
+};
+```
+---
+## 🔗 Type Alias Example
 
-## type ID = string | number;
+```ts
+type ID = string | number;
+```
 
-## type Admin = {
-## name: string;
-## role: string;
-## };
+---
 
-## type SuperAdmin = Admin & { accessLevel: number };
+## 🧬 Intersection Type Example
 
-## const admin1: SuperAdmin = {
-## name: "Azmir",
-## role: "Manager",
-## accessLevel: 5
-## };
+```ts
+type Admin = {
+  name: string;
+  role: string;
+};
+
+type SuperAdmin = Admin & { accessLevel: number };
+
+const admin1: SuperAdmin = {
+  name: "Azmir Uddin",
+  role: "Manager",
+  accessLevel: 5
+};
+```
+---
 
 
