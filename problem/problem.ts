@@ -3,10 +3,10 @@
 
 function formatString(typeing: string, toUpper?: boolean) {
     if (toUpper === true) {
-        return typeing.toLocaleLowerCase()
+        return typeing.toLocaleLowerCase();
     }
     else {
-        return typeing.toUpperCase()
+        return typeing.toUpperCase();
     }
 
 }
@@ -105,10 +105,10 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 function processValue(value: string | number): number {
 
     if (typeof value === "number") {
-        return value * 2
+        return value * 2;
     }
     else {
-        return value.length
+        return value.length;
     }
 }
 
@@ -144,3 +144,29 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
 
 const mostPrice = getMostExpensiveProduct(products)
 console.log(mostPrice);
+
+
+// Problem-7
+
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+  }
+  
+  function getDayType(day: Day): string {
+     if(day === Day.Saturday || day === Day.Sunday) {
+       return('Weekend');
+     }else{
+        return ('Weekday');
+     }
+  }
+
+  console.log(getDayType(Day.Monday)) ;  
+  console.log(getDayType(Day.Sunday)) ; 
+  
