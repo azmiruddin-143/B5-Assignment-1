@@ -6,7 +6,7 @@
 - And if you have to work with many types (such as union, intersection) then it is better to use type
 
 # Example
-## 🧩 Interface Example
+##  Interface Example
 
 ```ts
 interface User {
@@ -20,7 +20,7 @@ const user1: User = {
 };
 ```
 ---
-## 🔗 Type Alias Example
+##  Type Alias Example
 
 ```ts
 type ID = string | number;
@@ -28,7 +28,7 @@ type ID = string | number;
 
 ---
 
-## 🧬 Intersection Type Example
+##  Intersection Type Example
 
 ```ts
 type Admin = {
@@ -47,3 +47,39 @@ const admin1: SuperAdmin = {
 ---
 
 
+# What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+
+## enum (full form: enumeration) is a feature of TypeScript that allows us to create a group of specific values ​​— so that we don't have to write them over and over again, and the code is cleaner and safer.
+
+## Suppose I'm building an app where the user selects their favorite day. I want the user to only enter Monday, Tuesday, Wednesday — nothing else.
+
+## Now, if I use the string ("Monday") directly, there's a risk of typos or incorrect strings. For example, someone might write "Monday".
+
+## Now if I use enum, I will decide in advance what values ​​the user can provide. This increases type safety.
+
+# Example
+
+
+##  Enum Example
+
+```ts
+enum FavoriteDay {
+  Monday,
+  Tuesday,
+  Wednesday
+}
+
+function chooseFavoriteDay(day: FavoriteDay) {
+  if (day === FavoriteDay.Monday) {
+    console.log("You chose Monday!");
+  } else if (day === FavoriteDay.Tuesday) {
+    console.log("You chose Tuesday!");
+  } else {
+    console.log("You chose Wednesday!");
+  }
+}
+
+chooseFavoriteDay(FavoriteDay.Monday); // Output: You chose Monday!
+```
+
+---
