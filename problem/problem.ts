@@ -22,13 +22,13 @@ type Book = {
     rating: number
 }
 
-const books:Book[] = [
+const books: Book[] = [
     { title: "Book A", rating: 4.5 },
     { title: "Book B", rating: 3.2 },
     { title: "Book C", rating: 5.0 }
 ];
 
-function filterByRating(items: Book[]):Book[] {
+function filterByRating(items: Book[]): Book[] {
     const filtering = items.filter(hi => hi.rating >= 4)
     return filtering
 
@@ -45,31 +45,31 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 }
 
 const allArayData = (concatenateArrays([1, 2], [3, 4], [5]))
-console.log(allArayData);
+// console.log(allArayData);
 
 
 // Problem-4
 
 
 class Vehicle {
-    private make:string;
+    private make: string;
     private year: number;
 
-  constructor( make:string,year: number) {
-    this.make= make
-    this.year= year
-  }
+    constructor(make: string, year: number) {
+        this.make = make
+        this.year = year
+    }
 
-  getInfo() {
-     return (`Make ${this.make} Year ${this.year}`)
-  }
+    getInfo() {
+        return (`Make ${this.make} Year ${this.year}`)
+    }
 
-  protected getMake() {
-    return this.make;
-  }
-  protected getYear() {
-    return this.year;
-  }
+    protected getMake() {
+        return this.make;
+    }
+    protected getYear() {
+        return this.year;
+    }
 
 
 }
@@ -78,20 +78,39 @@ class Car extends Vehicle {
 
     private model: string;
 
-   constructor( make:string,year: number, model:string) {
-    super(make,year);
-    this.model = model;
-   }
- 
-   getModel() {
-      return (`Model ${this.model}`)
-   }
+    constructor(make: string, year: number, model: string) {
+        super(make, year);
+        this.model = model;
+    }
 
-   getFullInfo() { 
-    return (`Make: ${this.getMake} MOdel: ${this.model} Year: ${this.getYear}`)
-   }
- }
- 
- const myCar = new Car("Toyota", 2020, "Corolla");
+    getModel() {
+        return (`Model ${this.model}`)
+    }
 
- console.log(myCar);
+    getFullInfo() {
+        return (`Make: ${this.getMake()} MOdel: ${this.model} Year: ${this.getYear()}`)
+    }
+}
+
+const myCar = new Car("Toyota", 2020, "Corolla");
+
+// console.log(myCar.getInfo());      
+// console.log(myCar.getModel());     
+// console.log(myCar.getFullInfo());
+
+
+// Problem-5
+
+
+function processValue(value: string | number): number {
+
+    if (typeof value === "number") {
+        return value * 2
+    }
+    else {
+        return value.length
+    }
+}
+
+const processResult = processValue(10)
+console.log(processResult);
