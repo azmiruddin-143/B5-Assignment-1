@@ -113,4 +113,34 @@ function processValue(value: string | number): number {
 }
 
 const processResult = processValue(10)
-console.log(processResult);
+// console.log(processResult);
+
+
+// Problem-6
+
+
+interface Product {
+    name: string,
+    price: number
+}
+
+const products:Product[] = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+  ];
+  
+function getMostExpensiveProduct(products: Product[]): Product | null {
+
+    if(products.length === 0) {
+        return null;
+    }
+    const mostExpensive = products.reduce((prev,current) =>{
+        return current.price > prev.price ? current : prev;
+    })
+    return mostExpensive;
+
+}
+
+const mostPrice = getMostExpensiveProduct(products)
+console.log(mostPrice);
