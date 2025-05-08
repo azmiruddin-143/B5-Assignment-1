@@ -47,20 +47,12 @@ const admin1: SuperAdmin = {
 ---
 
 
-# What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+# What is the use of enums in TypeScript? Provide an example of a numeric and string enum. 
 
-## enum (full form: enumeration) is a feature of TypeScript that allows us to create a group of specific values ​​— so that we don't have to write them over and over again, and the code is cleaner and safer.
-
-## Suppose I'm building an app where the user selects their favorite day. I want the user to only enter Monday, Tuesday, Wednesday — nothing else.
-
-## Now, if I use the string ("Monday") directly, there's a risk of typos or incorrect strings. For example, someone might write "Monday".
-
-## Now if I use enum, I will decide in advance what values ​​the user can provide. This increases type safety.
-
-# Example
+## enum (full form: enumeration) is a feature of TypeScript that allows us to create a group of specific values ​​— so that we don't have to write them over and over again, and the code is cleaner and safer.Suppose I'm building an app where the user selects their favorite day. I want the user to only enter Monday, Tuesday, Wednesday — nothing else.Now, if I use the string ("Monday") directly, there's a risk of typos or incorrect strings. For example, someone might write "Monday".Now if I use enum, I will decide in advance what values ​​the user can provide. This increases type safety.
 
 
-##  Enum Example
+## Enum Example
 
 ```ts
 enum FavoriteDay {
@@ -80,6 +72,24 @@ function chooseFavoriteDay(day: FavoriteDay) {
 }
 
 chooseFavoriteDay(FavoriteDay.Monday); // Output: You chose Monday!
-```
 
+
+enum FavoriteColor {
+  Red = "RED",
+  Green = "GREEN",
+  Blue = "BLUE"
+}
+
+function chooseFavoriteColor(color: FavoriteColor) {
+  if (color === FavoriteColor.Red) {
+    console.log("You chose Red!");
+  } else if (color === FavoriteColor.Green) {
+    console.log("You chose Green!");
+  } else {
+    console.log("You chose Blue!");
+  }
+}
+
+chooseFavoriteColor(FavoriteColor.Green); // Output: You chose Green!
+```
 ---
